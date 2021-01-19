@@ -1,0 +1,151 @@
+//MD JIDANUL HAKIM JITU
+//ID: 20-44365-3
+//Ans: 1
+
+#include <iostream>
+using namespace std;
+
+class teacher
+{
+    private:
+        char  id[30];       //Id might be used character with number. That's why I used Char here
+
+    public:
+        //function to get ID
+        void getDetails(void);
+        //function to print ID
+        void putDetails(void);
+};
+
+//function defining outside of the class to get detials
+void teacher::getDetails(void){
+    cout << "Enter ID: " ;
+    cin >> id;
+}
+
+//function defining outside of the class to print details
+void teacher::putDetails(void){
+    cout << "Your Id is: "<< id;
+}
+
+int main()
+{
+    teacher T1;   //Creating Object T1
+ T1.getDetails();
+ T1.putDetails();
+ return 0;
+}
+
+
+
+//MD JIDANUL HAKIM JITU
+//ID: 20-44365-3
+//Ans: 2
+
+#include <iostream>
+using namespace std;
+
+#define MAX 10
+
+class Footballer
+{
+    private:
+        char  name[30];
+        int   goals;
+        int   income;
+    public:
+        //A function to get footballer details
+        void getDetails(void);
+        //Three separate function to print footballer details
+        void putName(void);
+        void putGoals(void);
+        void putIncome(void);
+};
+
+//Get footballer details
+void Footballer::getDetails(void){
+    cout << "Name of Footballer : " ;
+    cin >> name;
+    cout << "Goals of the footballer: ";
+    cin >> goals;
+    cout << "Income of the footballer: ";
+    cin >> income;
+}
+
+//Print footballer details
+void Footballer::putName(void){
+    cout << "Name: " << name <<endl;
+}
+void Footballer::putGoals(void){
+    cout << "Goals: " << goals <<endl;
+}
+void Footballer::putIncome(void){
+    cout << "Income: " << income <<endl <<endl;
+}
+
+int main()
+{
+    Footballer std[MAX];       //Array of objects
+    int n,loop;
+
+    cout << "Enter total number of footballers: ";
+    cin >> n; cout<<"\n";
+
+    for(loop=0; loop< n; loop++){
+        cout << "Enter details of the Footballer " << loop+1 << ":\n";
+        std[loop].getDetails();
+    }
+
+    cout << endl;
+
+    for(loop=0;loop< n; loop++){
+        cout << "Details of all Footballer " << (loop+1) << ":\n";
+        std[loop].putName();
+        std[loop].putGoals();
+        std[loop].putIncome();
+
+    }
+
+    return 0;
+}
+
+
+
+
+//MD JIDANUL HAKIM JITU
+//ID: 20-44365-3
+//Ans: 3
+
+#include <iostream>
+using namespace std;
+class Bookstore
+{
+    private:
+        float  price;
+    public:
+        //function to get ID
+        void getDetails(float p);
+        //function to print ID
+        int getData();
+};
+
+//function defining outside of the class to get detials
+void Bookstore::getDetails(float p){
+    cout << "Enter Book price: " ;
+    cin >> price;
+}
+
+//function defining outside of the class to print details
+int Bookstore::getData(){
+    cout << "Price of your book is: "<< price <<" BDT";
+}
+
+int main()
+{
+    Bookstore Book;   //Creating Object Book
+    int p;
+ Book.getDetails(p);
+ Book.getData();
+ return 0;
+}
+

@@ -1,0 +1,278 @@
+// Md. Jidanul Hakim Jitu
+// Id: 20-44365-3
+// Ans No : 1 (Assignment Final)
+
+#include<iostream>
+using namespace std;
+
+class building
+{
+protected:
+    int floors;
+    int rooms;
+public:
+    double squareFootage;
+public:
+    void getDetails()
+    {
+        cout<<"Number of floors: ";
+        cin>>floors;
+        cout<<"Number of rooms: ";
+        cin>>rooms;
+        cout<<"Size of total square footage: ";
+        cin>>squareFootage;
+        cout<<endl;
+    }
+    void putDetails()
+    {
+        cout<<"The number of floors is: "<<floors<<endl;
+        cout<<"The number of rooms is: "<<rooms<<endl;
+        cout<<"The number total square footage is: "<<squareFootage<<endl;
+        cout<<endl;
+    }
+
+};
+
+class house:public building
+{
+protected:
+    int bedrooms;
+    int bathrooms;
+public:
+
+     void getHouseDet()
+    {
+        cout<<"Number of bedrooms: ";
+        cin>>bedrooms;
+        cout<<"Number of bathrooms: ";
+        cin>>bathrooms;
+        cout<<endl;
+    }
+    void putHouseDet()
+    {
+         cout<<"The number of bedrooms: "<<bedrooms<<endl;
+         cout<<"The number of bathrooms: "<<bathrooms<<endl;
+         cout<<endl;
+    }
+
+};
+
+class office:public building
+{
+protected:
+    int fireExtinguishers;
+    int telephoneNumbers;
+public:
+      void getOfficeDet()
+    {
+        cout<<"Number of fire extinguishers: ";
+        cin>>fireExtinguishers;
+        cout<<"Number of Telephones: ";
+        cin>>telephoneNumbers;
+        cout<<endl;
+    }
+
+     void putOfficeDet()
+    {
+         cout<<"The number of fire extinguishers: "<<fireExtinguishers<<endl;
+          cout<<"The telephone numbers are: "<<telephoneNumbers<<endl;
+    }
+
+};
+
+int main()
+{
+    house* obj_1=new house;
+    office* obj_2=new office;
+    obj_1 -> getDetails();
+    obj_1 -> putDetails();
+    obj_1 -> getHouseDet();
+    obj_1 -> putHouseDet();
+    obj_2 ->getOfficeDet();
+    obj_2 ->putOfficeDet();
+    return 0;
+}
+
+
+
+
+
+
+// Md. Jidanul Hakim Jitu
+// Id: 20-44365-3
+// Ans No : 2 (Assignment Final)
+
+#include<iostream>
+#include<string.h>
+using namespace std;
+
+class person
+{
+private:
+    string name;
+    double age;
+public:
+    void setName(string n)
+    {
+        name=n;
+        cout<<"Name : ";
+        getline (cin,name);
+    }
+    string getName()
+    {
+       return name;
+    }
+public:
+    double setAge(double x)
+    {
+        age=x;
+        cout<<"Age : ";
+        cin>>age;
+    }
+    double getAge()
+    {
+        return age;
+    }
+};
+
+class student:public person
+{
+private:
+    double cgpa;
+public:
+    double setCGPA(double y)
+    {
+        cgpa=y;
+        cout<<"CGPA : ";
+        cin>>cgpa;
+    }
+    double getCGPA()
+    {
+        if (cgpa > 4 || cgpa < 0){
+            cout<<"Invalid CGPA ";
+        }
+        return cgpa;
+    }
+};
+
+class teacher:public person
+{
+private:
+    int salary;
+public:
+    int setSalary(int z)
+    {
+        salary=z;
+        cout<<"Salary : ";
+        cin>>salary;
+    }
+    int getSalary()
+    {
+        return salary;
+    }
+};
+
+int main()
+{ string name;
+    double age;
+    double cgpa;
+     person showname;
+     person showage;
+     student showcgpa;
+     teacher showsalary;
+     showname.setName(name);
+     showage.setAge(age);
+     showcgpa.setCGPA(cgpa);
+     showsalary.setSalary(50000);
+     cout<<"The name is: "<<showname.getName()<<endl;
+     cout<<"The age is: "<<showage.getAge()<<endl;
+     cout<<"The cgpa is: "<<showcgpa.getCGPA()<<endl;
+     cout<<"The salary is: "<<showsalary.getSalary()<<endl;
+     return 0;
+}
+
+
+
+
+
+
+// Md. Jidanul Hakim Jitu
+// Id: 20-44365-3
+// Ans No : 3 (Assignment Final)
+
+#include<iostream>
+using namespace std;
+
+class Mammal
+{
+public:
+    Mammal()
+    {
+        cout<<"Mammals can give direct birth"<<endl;
+    }
+};
+class wingedAnimal
+{
+public:
+    wingedAnimal()
+    {
+        cout<<"Winged animals can flap"<<endl;
+    }
+};
+class Bat:public Mammal, public wingedAnimal
+{
+public:
+    Bat()
+    {
+        cout<<"Bats are birds of midnight"<<endl;
+    }
+
+};
+int main()
+{
+    Bat display;
+}
+
+
+
+
+
+// Md. Jidanul Hakim Jitu
+// Id: 20-44365-3
+// Ans No : 4 (Assignment Final)
+
+#include<iostream>
+using namespace std;
+
+class mr_Makeem
+{
+public:
+    mr_Makeem()
+    {
+        cout<<"\t1. Mr. Makeem built a mansion in California and drove a Ford Mustang."<<endl;
+    }
+};
+
+class mr_hakeem:public mr_Makeem
+{
+public:
+    mr_hakeem()
+    {
+        cout<<"\t2. Mr. Hakeem took over the business and further extended their wealth by purchasing a casino in Las Vegas."<<endl;
+    }
+};
+
+class mr_rakeem:public mr_hakeem
+{
+public:
+    mr_rakeem()
+    {
+        cout<<"\t3. Mr. Hakeem retired and his son Mr. Rakeem started investing in the garments industry."<<endl;
+    }
+};
+
+main()
+{
+    cout<<"\n***********************************Story of Mr Hakeem**************************************\n\n";
+    mr_rakeem display;
+}

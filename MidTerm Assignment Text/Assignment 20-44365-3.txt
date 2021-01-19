@@ -1,0 +1,279 @@
+//Ans No 1
+//MD. JIDANUL HAKIM JITU
+//ID 20-44365-3
+
+#include<iostream>
+#include<stdio.h>
+#include<string.h>
+using namespace std;
+
+int main()
+{
+    cout<< "Enter your full name to see it in reverse : " <<endl;
+    char name[30];
+    gets(name);
+    strrev(name);
+    cout<<endl;
+    cout<< "Your name in reverse is : "<<name;
+    cout<<endl;
+    return 0;
+}
+
+
+
+
+//Ans No 2
+//MD. JIDANUL HAKIM JITU
+//ID 20-44365-3
+
+#include <cstring>
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    char dest[50];
+    char src[50];
+    cout<<"First Favourite subject: ";
+    cin>>dest;
+    cout<<"First Favourite subject: ";
+    cin>>src;
+
+    strcat(dest, src);
+
+    cout << dest ;
+
+    return 0;
+
+}
+
+
+
+
+//Ans No 3
+//MD. JIDANUL HAKIM JITU
+//ID 20-44365-3
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+   char source[40] = "Double Chicken Delight Burger";
+   char target[40];
+
+   // copying source to target
+   strcpy(target, source);
+
+    //printing Target
+   puts(target);
+
+   return 0;
+}
+
+
+
+
+//Ans No 4
+//MD. JIDANUL HAKIM JITU
+//ID 20-44365-3
+
+#include <cstring>
+#include <iostream>
+
+using namespace std;
+
+void display(char *r1, char *r2, int result)
+{
+    if(result > 0 || result < 0)
+        cout << "r1 = " << r1 << " and " << "r2 = " << r2 << " are not same" << endl;
+    else
+        cout << "r1 = " << r1 << " and " << "r2 = " << r2 << " are same" << endl;
+}
+
+int main()
+{
+    char r1[] = "four ohm";
+    char r2[] = "four ohm";
+    int result;
+
+    result = strcmp(r1,r2);
+    display(r1,r2,result);
+
+
+    return 0;
+}
+
+
+
+
+//Ans No 5
+//MD. JIDANUL HAKIM JITU
+//ID 20-44365-3
+
+#include <cstring>
+#include <iostream>
+
+using namespace std;
+
+void display(char *r1, char *r2, int result)
+{
+    if(result > 0 || result < 0)
+        cout << "r1 = " << r1 << " and " << "r2 = " << r2 << " are not same" << endl;
+    else
+        cout << "r1 = " << r1 << " and " << "r2 = " << r2 << " are same" << endl;
+}
+
+int main()
+{
+    char r1[] = "four ohm";
+    char r2[] = "five ohm";
+    int result;
+
+    result = strcmp(r1,r2);
+    display(r1,r2,result);
+
+
+    return 0;
+}
+
+
+
+//Ans No 6
+//MD. JIDANUL HAKIM JITU
+//ID 20-44365-3
+
+#include <cstring>
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    char name[30];
+    cout<< "Your name: ";
+    gets(name);
+
+    int length = strlen(name);
+
+    cout << "Length of your name: " << length << endl;
+
+    return 0;
+}
+
+
+
+//Ans No 7
+//MD. JIDANUL HAKIM JITU
+//ID 20-44365-3
+
+
+#include<iostream>
+using namespace std;
+
+int main(){
+    int i1=0, i2=0;
+    char r1[]= "four ohm";
+    char r2[]= "four ohm";
+
+for(i1=0;r1[i1]!='\0';i1++){}
+for(i2=0;r1[i2]!='\0';i2++){}
+
+    if(i1!=i2){
+        cout<<"r1 = " <<r1 << " and " << "r2 = " <<r2 << " are different"<<endl;
+    }
+
+else{
+int i3=0;
+    for(i3 =0; i3!=i2; i3++){
+        if(r1[i3]!=r2[i3])
+        break;
+        }
+            if(i3!=i2){
+                cout<<"r1 = " <<r1 << " and " << "r2 = " <<r2 << " are different"<<endl;
+                }
+            else{
+                cout<<"r1 = " <<r1 << " and " << "r2 = " <<r2 << " are same"<<endl;
+                }
+ }
+   return 0;
+ }
+
+
+
+//Ans No 8
+//MD. JIDANUL HAKIM JITU
+//ID 20-44365-3
+
+
+#include<iostream>
+#include<string.h>
+using namespace std;
+
+int main()
+{
+
+	char name[40];
+
+	cout<< "Your name: ";
+	gets(name);
+
+	cout<< "Reverse form of your name: ";
+	for(int i=25; i>-1; i--)
+	{
+
+    		cout<< name[i];
+
+	}
+
+	return 0;
+
+}
+
+
+
+//Ans No 9
+//MD. JIDANUL HAKIM JITU
+//ID 20-44365-3
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+
+int main()
+{
+	int i=10;
+	int *j;
+	j=&i;
+	cout<<"Value using i = " << i <<endl;
+	cout<<"Value using &i = " <<&i<<endl;
+	cout<<"Value using j = " <<j<<endl;
+	cout<<"Value using *j = " <<*j<<endl;
+	return 0;
+}
+
+
+
+
+//Ans No 10
+//MD. JIDANUL HAKIM JITU
+//ID 20-44365-3
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int *num1,*num2;
+    int a,b;
+
+    num1=&a;
+    num2=&b;
+
+    cout<<"Enter Number 2: "; cin>>a; cout<<"Enter Number 2: "; cin>>b;
+    int sum= *num1 + *num2;
+    cout<<"The Sum of the two numbers us pointers: "<<sum;
+
+    return 0;
+}
+

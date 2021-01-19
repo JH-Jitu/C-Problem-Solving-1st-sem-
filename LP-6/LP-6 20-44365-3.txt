@@ -1,0 +1,174 @@
+// Md. Jidanul Hakim Jitu
+// Id: 20-44365-3
+// Ans No : 1 (LP-6)
+
+#include<iostream>
+using namespace std;
+
+class course
+{
+private:
+    char course_title[60][50];
+    int course_code[60];
+    int credit[60];
+    int n;
+public:
+    int setData()
+    {
+        cout<<"Enter course number: ";
+        cin>>n;
+        for(int i=0; i<n; i++)
+        {
+            cout<< '\n';
+            cout<<"Details of course: " << i+1 << '\n';
+        cout<<"Enter course title : ";
+        cin>>course_title[i];
+        cout<<"Enter course code : ";
+        cin>>course_code[i];
+        cout<<"Enter credit : ";
+        cin>>credit[i];
+        }
+        cout<<endl;
+    }
+    int getData()
+    {
+
+        for(int i=0; i<n; i++)
+        {
+            cout << "Information of course " <<i+1 <<'\n';
+            cout<<"\tThe course title is : "<<course_title[i]<<endl;
+            cout<<"\tThe course course is : "<<course_code[i]<<endl;
+            cout<<"\tThe course credit is : "<<credit[i]<<endl;
+            cout<<endl;
+        }
+    }
+};
+int main()
+{
+    course A;
+    A.setData();
+    A.getData();
+    return 0;
+}
+
+
+
+
+// Md. Jidanul Hakim Jitu
+// Id: 20-44365-3
+// Ans No : 2 (LP-6)
+
+#include<iostream>
+using namespace std;
+
+class A
+{
+private:
+    int a;
+    int b;
+    int c;
+public:
+    A()
+    {
+         cout<<"No Arguement"<<endl;
+    }
+    A(int x)
+    {
+        a=x;
+        cout << "one argument ";
+        cout<<a<<endl;
+    }
+    A(int x, int y)
+    {
+        a=x;
+        b=y;
+        cout << "two argument ";
+        cout<<a<< ", " <<b <<endl;
+    }
+    A(int x, int y, int z)
+    {
+        a=x;
+        b=y;
+        c=z;
+        cout << "three argument ";
+        cout<< a << ", " << b << ", " <<c <<endl;
+    }
+};
+
+int main()
+{
+    A arg1,arg2(12),arg3(13,14),arg4(15,16,17);
+    return 0;
+}
+
+
+
+
+// Md. Jidanul Hakim Jitu
+// Id: 20-44365-3
+// Ans No : 3 (LP-6)
+
+#include<iostream>
+using namespace std;
+
+class building
+{
+protected:
+    int floors;
+protected:
+    int rooms;
+public:
+    double squareFootage;
+public:
+    void getBuildingDet()
+    {
+        cout<<"Number of floors: ";
+        cin>>floors;
+        cout<<"Number of rooms: ";
+        cin>>rooms;
+        cout<<"Size of total square footage: ";
+        cin>>squareFootage;
+        cout<<endl;
+    }
+    void putBuildingDet()
+    {
+        cout<<"The number of floors is: "<<floors<<endl;
+        cout<<"The number of rooms is: "<<rooms<<endl;
+        cout<<"The number total square footage is: "<<squareFootage<<endl;
+        cout<<endl;
+    }
+
+};
+
+class house:public building
+{
+protected:
+    int bedrooms;
+    int bathrooms;
+public:
+
+     void getHouseDet()
+    {
+        cout<<"Number of bedrooms: ";
+        cin>>bedrooms;
+        cout<<"Number of bathrooms: ";
+        cin>>bathrooms;
+        cout<<endl;
+    }
+    void putHouseDet()
+    {
+         cout<<"The number of bedrooms: "<<bedrooms<<endl;
+         cout<<"The number of bathrooms: "<<bathrooms<<endl;
+    }
+
+};
+
+int main()
+{
+    house s;
+    s.getBuildingDet();
+    s.putBuildingDet();
+    s.getHouseDet();
+    s.putHouseDet();
+    return 0;
+}

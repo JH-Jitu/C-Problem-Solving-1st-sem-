@@ -1,0 +1,148 @@
+// Ans 1:
+//Name: MD. JIDANUL HAKIM JITU
+//ID: 20-44365-3
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int arr[] = { 10, -2, 9, -4, -6, -7, 12, 14, 19, -20 };
+//  Identifying length
+	int length = *(&arr + 1) - arr;
+	cout<<"Length of array is: " << length <<endl;
+	int pos_count = 0;
+	int neg_count = 0;
+	int i;
+//	Finding positive and negative value
+	for (i = 0; i < length; i++) {
+		if (arr[i] > 0)
+			pos_count++;
+	}
+	cout << "Length of Positive Number: " << pos_count <<endl;
+
+	for (i = 0; i < length; i++) {
+		if (arr[i] < 0)
+			neg_count++;
+	}
+	cout << "Length of Negative Number: " << neg_count <<endl;
+}
+
+
+
+// Ans 2:
+//Name: MD. JIDANUL HAKIM JITU
+//ID: 20-44365-3
+
+#include<iostream>
+using namespace std;
+
+int main(){
+
+char name[]={'M','a','s','h','r','a','f','e'};
+int i;
+//  Identifying length
+int length = *(&name + 1) - name;
+//assigning value
+for(i=0;i<length;i++){
+cout<<name[i];
+
+}
+return 0;
+}
+
+
+
+
+// Ans 3:
+//Name: MD. JIDANUL HAKIM JITU
+//ID: 20-44365-3
+
+#include<iostream>
+using namespace std;
+
+void sum(int a,int b,int c){
+c=a+b;
+cout<<c<<endl;}
+void sub(int a,int b,int c){
+c=a-b;
+cout<<c<<endl;}
+void mul(int a,int b,int c){
+c=a*b;
+cout<<c<<endl;}
+void div(double a,double b,double c){
+c=a/b;
+cout<<c<<endl;}
+int main(){
+int a,b,c;
+a=30;
+b=15;
+sub(a,b,c);
+sum(a,b,c);
+mul(a,b,c);
+div(a,b,c);
+}
+
+
+
+
+
+// Ans 4:
+//Name: MD. JIDANUL HAKIM JITU
+//ID: 20-44365-3
+
+#include<iostream>
+using namespace std;
+
+void sum(int sub,double gpa, double totalGpa, double credit, double totalCredit, double cgpa){
+    cout << "Number of subject: ";cin >> sub;
+
+    int i;
+    for(i=1;i<=sub;i++){
+    cout<< "Subject Number : " << i <<endl ;
+    cout << "GPA of subject " << i << ": " ;cin >> gpa;
+    if(gpa > 4 || gpa<0){
+        cout<<"GPA can't be better than 4.00 or less than 0 " <<endl;
+        break;
+    }
+    cout << "Credit of subject: " << i << ": "; cin >> credit;
+    totalGpa = (totalGpa + gpa * credit);
+    totalCredit = totalCredit + credit;
+
+
+}
+
+
+    double result = totalGpa/totalCredit;
+
+
+cgpa=result;
+cout << "Your CGPA is: " << cgpa <<endl;}
+
+int main(){
+double sub, gpa, totalGpa, credit, totalCredit, cgpa;
+sum(sub, gpa, totalGpa, credit, totalCredit, cgpa);
+}
+
+
+
+
+
+
+
+// Ans 5:
+//Name: MD. JIDANUL HAKIM JITU
+//ID: 20-44365-3
+
+#include<iostream>
+using namespace std;
+
+int display(int a){
+a = 10;
+return a;
+}
+
+int main(){
+int a;
+cout << "Displaying the value of 'a' using return statement: " << display(a) <<endl;
+}
